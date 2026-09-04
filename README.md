@@ -25,3 +25,23 @@ The model was evaluated using `accuracy_score` and a confusion matrix.
 ## Conclusion
 
 The Logistic Regression model was able to predict passenger survival with reasonable accuracy. The confusion matrix also helped identify correct and incorrect predictions made by the model.
+
+
+
+
+## Task 10: Live Deployment — Streamlit App
+
+### Live App
+🔗 [Try the Churn Prediction App](https://neurofive-ml-track-exqp7ywiyxx3nev7mshqmc.streamlit.app/)
+
+### Approach
+- Loaded the saved pipeline (`churn_pipeline.pkl`) from Task 7 inside a
+  Streamlit app.
+- Built input fields for all customer features used during training,
+  including the engineered features (`TotalServices`, `ChargePerTenure`).
+- Deployed the app for free using Streamlit Community Cloud, connected
+  directly to this GitHub repository.
+
+### Files
+- `app.py` — Streamlit web app
+- `requirements.txt` — dependencies for deployment
