@@ -3,8 +3,15 @@ import pandas as pd
 import joblib
 import numpy as np
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model = joblib.load(os.path.join(BASE_DIR, 'fare_predictor.pkl'))
+import os
+
+try:
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+except NameError:
+    BASE_DIR = os.getcwd()
+
+model_path = os.path.join(BASE_DIR, 'fare_predictor.pkl')
+model = joblib.load(model_path)
 
 st.title("Fair Price Predictor")
 st.write("Estimate a fair fare for your trip before you book.")
